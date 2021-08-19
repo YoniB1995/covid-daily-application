@@ -25,7 +25,7 @@ const Mobile = ({ children }) => {
     <Mobile>
         <MobileApp />
     </Mobile>
-    
+
     </>
 
   );

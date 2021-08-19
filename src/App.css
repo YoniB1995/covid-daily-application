@@ -109,13 +109,11 @@
 }
 
 .footer-style {
-  bottom: 0;
   background: black;
-  position: absolute;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  height: 3rem;
   width: 100vw;
   text-align: center;
   color: #f4f4f4;
+  bottom: 0;
 }

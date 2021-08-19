@@ -21,11 +21,9 @@ h4 {
 }
 
 .mapContainer {
-  position: absolute;
-  top: 150px;
   margin-top: 10px;
-  height: 650px;
+  position: relative;
+  height: 450px;
   right: 20px;
   left: 180px;
-  bottom: 0;
 }
