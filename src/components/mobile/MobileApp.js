@@ -1,6 +1,6 @@
 import React, {useEffect,useState} from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import NavbarComp from './Nav';
+import NavbarComp from './NavBarComp';
 import Countries from './Countries';
 import AboutCorona from './AboutCorona';
 import About from './About';
@@ -41,7 +41,7 @@ const MobileApp = () => {
                 <>
                 <Countries
                     loading={loading}
-                    countries={countries}
+                    countriesArr={countries}
                 />
                 </>
               )}
