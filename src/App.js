@@ -5,6 +5,7 @@ import { useMediaQuery } from 'react-responsive';
 import Footer from './components/features/Footer'
 
 import './App.css';
+import FooterMobile from './components/mobile/FooterMobile';
 
 function App() {
   const Desktop = ({ children }) => {
@@ -24,6 +25,7 @@ const Mobile = ({ children }) => {
     </Desktop>
     <Mobile>
         <MobileApp />
+            <FooterMobile/>
     </Mobile>
 
     </>

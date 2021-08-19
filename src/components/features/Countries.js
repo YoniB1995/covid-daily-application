@@ -40,7 +40,7 @@ const Countries = ({countriesArr}) => {
     let skip = (page - 1) * PerPage;
 
     return (
-      <div style={{ marginTop: '10px' }}>
+      <div style={{ marginTop: '10px' , height:'100%' }}>
         <Navbar
           light
           expand='md'
@@ -67,18 +67,9 @@ const Countries = ({countriesArr}) => {
         <Container>
           <Row>
             <Col>
-              <div style={userStyle}>
-                {filteredCountries
-                  .slice(skip, PerPage + skip)
-                  .map((countries) => (
-                    <Country key={countries.id} countries={countries} />
-                  ))}
-              </div>
-            </Col>
-            <Col>
               <div>
                 <Pagination
-                  style={{ marginLeft: '15px' }}
+                  style={{ marginLeft: '15px' , marginBottom:'30px'}}
                   size='sm'
                   aria-label='Page navigation example'
                 >
@@ -130,6 +121,16 @@ const Countries = ({countriesArr}) => {
                 </Pagination>
               </div>
             </Col>
+            <Col>
+              <div style={userStyle}>
+                {filteredCountries
+                  .slice(skip, PerPage + skip)
+                  .map((countries) => (
+                    <Country key={countries.id} countries={countries} />
+                  ))}
+              </div>
+            </Col>
+            
           </Row>
           <Row></Row>
         </Container>

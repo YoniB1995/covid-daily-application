@@ -40,10 +40,6 @@ const NavBarComp = (props) => {
             </NavItem>
 
             <NavItem>
-              <NavLink href='/prevention'>Prevention</NavLink>
-            </NavItem>
-
-            <NavItem>
               <NavLink href='/about'>About</NavLink>
             </NavItem>
           </Nav>
