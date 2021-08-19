@@ -1,24 +1,23 @@
-import logo from './logo.svg';
+import React from 'react';
+import DesktopApp from './components/pages/DesktopApp';
+import { useMediaQuery } from 'react-responsive';
+import Footer from './components/features/Footer'
+
 import './App.css';
 
 function App() {
+  const Desktop = ({ children }) => {
+  const isDesktop = useMediaQuery({ minWidth: 992 });
+  return isDesktop ? children : null;
+};
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Desktop>
+    <DesktopApp />
+    </Desktop>
+    <Footer/>
+    </>
+
   );
 }
 
