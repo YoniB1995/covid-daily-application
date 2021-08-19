@@ -23,7 +23,7 @@ const NavbarComp = props => {
               icon={faLungsVirus}
               style={{ color: 'red', fontSize: '30px' }}
             />{' '}
-            COVID-19 (Coronavirus) Tracker
+            COVID-19 (Coronavirus) Daily App
           </NavbarBrand>
           <Nav navbar className=' float-right'>
             <NavItem>
@@ -35,12 +35,6 @@ const NavbarComp = props => {
             <NavItem>
               <NavLink href='/about-covid-19'>
                 <h6>What is COVID-19?</h6>
-              </NavLink>
-            </NavItem>
-
-            <NavItem>
-              <NavLink href='/prevention'>
-                <h6>Prevention</h6>
               </NavLink>
             </NavItem>
 

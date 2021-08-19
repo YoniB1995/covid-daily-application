@@ -20,11 +20,12 @@ const Mobile = ({ children }) => {
     <>
     <Desktop>
     <DesktopApp />
+    <Footer/>
     </Desktop>
     <Mobile>
         <MobileApp />
     </Mobile>
-    <Footer/>
+    
     </>
 
   );

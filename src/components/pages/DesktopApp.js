@@ -2,9 +2,8 @@ import React, { useState , useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import NavbarComp from '../features/NavItem';
 import Countries from '../features/Countries';
-import axios from 'axios';
 // import Total from './Total';
-// import About from './About';
+import About from '../pages//About';
 import AboutCorona from '../pages/AboutCorona';
 import Prevention from '../pages/Prevention';
 import CountryData from '../features/CountryData';
@@ -75,7 +74,7 @@ export default function DesktopApp() {
                             <Col  sm={10}>
                             <Tab.Content style={{ marginLeft: '5px',marginRight: '10px'}}>
                                 <Tab.Pane eventKey='first'>
-                                 <MapContainer />
+                                <MapContainer />
 
                                 </Tab.Pane>
                                 <Tab.Pane eventKey='second'>
@@ -103,7 +102,7 @@ export default function DesktopApp() {
                 {/* <LocalData /> */}
                 </>
             )} />         
-            {/* <Route exact path='/about' component={About} /> */}
+            <Route exact path='/about' component={About} />
             <Route exact path='/country/:country'
             render={(routeProps) => (
                 <CountryData
