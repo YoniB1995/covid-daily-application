@@ -1,5 +1,6 @@
 import React from 'react';
 import DesktopApp from './components/pages/DesktopApp';
+import MobileApp from './components/mobile/MobileApp';
 import { useMediaQuery } from 'react-responsive';
 import Footer from './components/features/Footer'
 
@@ -10,11 +11,19 @@ function App() {
   const isDesktop = useMediaQuery({ minWidth: 992 });
   return isDesktop ? children : null;
 };
+
+const Mobile = ({ children }) => {
+  const isMobile = useMediaQuery({ maxWidth: 767 });
+  return isMobile ? children : null;
+};
   return (
     <>
     <Desktop>
     <DesktopApp />
     </Desktop>
+    <Mobile>
+        <MobileApp />
+    </Mobile>
     <Footer/>
     </>
 
