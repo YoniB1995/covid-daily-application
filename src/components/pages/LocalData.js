@@ -1,5 +1,6 @@
+require('dotenv').config();
 import React, { useState , useEffect } from 'react';
-import ReactFlagsSelect from 'react-flags-select';
+import CountUp from 'react-countup';
 import {
   Spinner,
   Container,
@@ -36,7 +37,7 @@ const LocalData = () => {
             setLoading(true)
         })
 
-        fetch('http://newsapi.org/v2/everything?q=covid19&language=en&sortBy=publishedAt&apiKey=89512655467641419958c682e537a7c7')
+        fetch(`http://newsapi.org/v2/everything?q=covid19&language=en&sortBy=publishedAt&apiKey=${process.env.API_NEWS_KEY}`)
         .then(response => response.json())
         .then( result =>{
             setArticles(result.articles);
@@ -66,20 +67,20 @@ const LocalData = () => {
                 <Row style={{ textAlign: 'center' }} style={{ marginTop: '45px', marginRight: '10px' }}>
                 <Col>
                     <Card outline style={{ borderColor: '#3185F0',borderWidth: '2px',height: '100px',}} className='shadow-sm'>
-                    <h1 style={{ color: '#3185F0' }}>{cases}</h1>
+                    <h1 style={{ color: '#3185F0' }}><CountUp end={210937560} duration={20}/></h1>
                     <h4>Total Infected</h4>
                     </Card>
                 </Col>
                 <Col>
                     <Card outline style={{ borderColor: '#F03131',borderWidth: '2px',height: '100px',}}className='shadow-sm'>
-                    <h1 style={{ color: '#F03131' }}>{deaths}</h1>
+                    <h1 style={{ color: '#F03131' }}><CountUp end={4418993} duration={20}/></h1>
                     <h4>Total Deaths</h4>
                     </Card>
                 </Col>
                 <Col>
                     <Card outline style={{borderColor: '#099714',borderWidth: '2px',height: '100px',}}className='shadow-sm'>
                     <h1 style={{ color: '#099714' }}>
-                        {recovered}
+                        <CountUp end={188848042} duration={20}/>
                     </h1>
                     <h4>Total Recovered</h4>
                     </Card>
@@ -88,8 +89,8 @@ const LocalData = () => {
                 <Row style={{marginTop: '20px',marginRight: '10px',}}>
                 <Col>
                     <Card bod inverse style={{ backgroundColor: '#333',borderColor: '#3185F0',borderWidth: '2px',height: '100px',}}className='shadow-sm'>
-                    <h1 style={{ color: '#3185F0', marginTop: '-15px' }}>
-                    {todayCases}
+                    <h1 style={{ color: '#3185F0'}}>
+                    <CountUp end={17670525} duration={20}/>
                     </h1>
                     <h4>Infected Today </h4>
                     </Card>
@@ -97,14 +98,14 @@ const LocalData = () => {
                 <Col>
                     <Card inverse style={{backgroundColor: '#333',borderColor: '#3185F0',borderWidth: '2px',height: '100px',}}className='shadow-sm'>
                     <h1 style={{ color: '#F03131' }}>
-                    115,555
+                    <CountUp end={4416841} duration={20}/>
                     </h1>
                     <h4>Deaths Today </h4>
                     </Card>
                 </Col>
                 <Col>
                     <Card outline style={{borderColor: '#F03131',borderWidth: '2px',height: '100px',}} className='shadow-sm'>
-                    <h1 style={{ color: '#F03131' }}>20%</h1>
+                    <h1 style={{ color: '#F03131' }}>0.<CountUp end={8} duration={10}/>%</h1>
                     <h4>Mortality Rate </h4>
                     </Card>
                 </Col>
