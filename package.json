@@ -1,6 +1,7 @@
 {
   "name": "covid19-daily-app",
   "version": "0.1.0",
+  "homepage": "https://yonib1995.github.io/covid-daily-application",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
@@ -15,6 +16,7 @@
     "bootstrap": "^5.1.0",
     "chart.js": "^3.5.1",
     "dotenv": "^10.0.0",
+    "gh-pages": "^3.2.3",
     "mapbox-gl": "^2.4.1",
     "netlify-cli": "^6.6.1",
     "react": "^17.0.2",
@@ -33,6 +35,8 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
