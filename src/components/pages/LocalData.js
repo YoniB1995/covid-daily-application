@@ -36,7 +36,6 @@ const LocalData = () => {
             setCountries(result.countries);
             setLoading(true)
         })
-
         fetch(`http://newsapi.org/v2/everything?q=covid19&language=en&sortBy=publishedAt&apiKey=${KEY}`)
         .then(response => response.json())
         .then( result =>{
