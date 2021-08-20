@@ -1,4 +1,3 @@
-require('dotenv').config();
 import React, { useState , useEffect } from 'react';
 import CountUp from 'react-countup';
 import {
@@ -13,6 +12,7 @@ import {
 } from 'reactstrap';
 import '../../App.css';
 import TopNewsProvider from '../features/TopNewsProvider';
+require('dotenv').config();
 
 const LocalData = () => {
     const [countries,setCountries] = useState([]);
@@ -37,7 +37,7 @@ const LocalData = () => {
             setLoading(true)
         })
 
-        fetch(`http://newsapi.org/v2/everything?q=covid19&language=en&sortBy=publishedAt&apiKey=${process.env.API_NEWS_KEY}`)
+        fetch(`http://newsapi.org/v2/everything?q=covid19&language=en&sortBy=publishedAt&apiKey=${process.env.REACT_APP_KEY}`)
         .then(response => response.json())
         .then( result =>{
             setArticles(result.articles);
