@@ -10,7 +10,7 @@ import CountryData from '../features/CountryData';
 import MapContainer from '../features/MapContainer';
 import { Tab, Nav, Tabs, Container, Row, Col } from 'react-bootstrap';
 import SafetyTips from '../features/SafetyTips';
-// import LocalData from './LocalData';
+import LocalData from './LocalData';
 
 export default function DesktopApp() {
 
@@ -99,7 +99,7 @@ export default function DesktopApp() {
                     <Col></Col>
                     </Row>
                 </Container>
-                {/* <LocalData /> */}
+                <LocalData />
                 </>
             )} />         
             <Route exact path='/about' component={About} />
