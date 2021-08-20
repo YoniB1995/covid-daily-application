@@ -109,7 +109,7 @@
 }
 
 .footer-style {
-  background: black;
+  background: #282c34;
   position: fixed;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

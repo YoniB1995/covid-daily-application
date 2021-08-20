@@ -37,7 +37,7 @@ const LocalData = () => {
             setLoading(true)
         })
 
-        fetch(`http://newsapi.org/v2/everything?q=covid19&language=en&sortBy=publishedAt&apiKey=${process.env.REACT_APP_KEY}`)
+        fetch(`http://newsapi.org/v2/everything?q=covid19&language=en&sortBy=publishedAt&apiKey=${KEY}`)
         .then(response => response.json())
         .then( result =>{
             setArticles(result.articles);
@@ -124,3 +124,17 @@ const LocalData = () => {
 
 
 export default LocalData;
+
+
+
+
+
+
+
+
+
+
+
+
+
+const KEY = '0ea69f4f6c38427abb42e46293451627';
