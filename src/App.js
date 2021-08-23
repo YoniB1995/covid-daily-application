@@ -3,6 +3,7 @@ import DesktopApp from './components/pages/DesktopApp';
 import MobileApp from './components/mobile/MobileApp';
 import { useMediaQuery } from 'react-responsive';
 import Footer from './components/features/Footer'
+import {Info} from './components/features/ResetInfo'
 
 import './App.css';
 import FooterMobile from './components/mobile/FooterMobile';
