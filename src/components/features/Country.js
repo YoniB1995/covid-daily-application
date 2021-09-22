@@ -60,24 +60,6 @@ const Country = (props) => {
                 renderText={(value) => <span>{value}</span>}
               />{' '}
             </CardSubtitle>
-            {/* <CardSubtitle>
-              <strong>Critical : </strong>
-              <NumberFormat
-                value={this.props.countries.critical}
-                displayType={'text'}
-                thousandSeparator={true}
-                renderText={(value) => <span>{value}</span>}
-              />{' '}
-            </CardSubtitle>
-            <CardSubtitle>
-              <strong>Active : </strong>
-              <NumberFormat
-                value={this.props.countries.active}
-                displayType={'text'}
-                thousandSeparator={true}
-                renderText={(value) => <span>{value}</span>}
-              />{' '}
-            </CardSubtitle> */}
             <hr />
             <CardSubtitle>
               <strong>Cases Today : </strong>

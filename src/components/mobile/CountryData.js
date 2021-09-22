@@ -88,26 +88,6 @@ const CountryData = (props) =>  {
                 </CardDeck>
               </CardBody>
             </Card>
-
-            {/* <Card inverse body outline color="primary">
-        
-        <CardBody>
-          
-
-
-      <Card body inverse color="warning" className="text-center" style={{marginTop:'80px'}}>
-      <h3>{this.props.country.todayCases}</h3>
-        <h4>New Cases</h4>
-        
-      </Card>
-      <Card body inverse color="danger" className="text-center" style={{marginTop:'20px'}}>
-      <h3>{this.props.countries.todayDeaths}</h3>
-        <h4>New Deaths</h4>
-        
-      </Card>
-        </CardBody> */}
-            {/* </Card>
-             */}
           </Row>
         </Container>
         <h1></h1>

@@ -1,7 +1,6 @@
 import React from 'react'
 import '../../App.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLungsVirus } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin,faStaylinked } from '@fortawesome/free-brands-svg-icons';
 
 const FooterMobile = () => {

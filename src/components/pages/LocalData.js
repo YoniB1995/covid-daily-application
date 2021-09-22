@@ -1,11 +1,8 @@
 import React, { useState , useEffect } from 'react';
 import CountUp from 'react-countup';
 import {
-  Spinner,
   Container,
   Card,
-  CardTitle,
-  CardText,
   Row,
   Col,
   Button,
@@ -17,15 +14,6 @@ require('dotenv').config();
 const LocalData = () => {
     const [countries,setCountries] = useState([]);
     const [articles,setArticles] = useState([]);
-    const [recovered,setRecovered] = useState([]);
-    const [cases,setCases] = useState([]);
-    const [deaths,setDeaths] = useState([]);
-    const [active,setActive] = useState([]);
-    const [critical,setCritical] = useState([]);
-    const [todayCases,setTodayCases] = useState([]);
-    const [todayDeaths,setTodayDeaths] = useState([]);
-    const [country,setCountry] = useState([]);
-    const [defaultCountry,setDefaultCountry] = useState([]);
     const [loading,setLoading] = useState([]);
 
 

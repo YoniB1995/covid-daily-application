@@ -12,8 +12,6 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 const Countries = ({countriesArr}) => {
     const [search,setSearch] = useState('')
-    const [filter,setFilter] = useState(null)
-    const [page,setPage] = useState(1)
     const [gif,setGif] = useState(true)
     const covidGif = <iframe src="https://giphy.com/embed/dVuyBgq2z5gVBkFtDc" width="350px" height="500px" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
   const handleChange = (e) => {
